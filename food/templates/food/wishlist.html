@@ -1,0 +1,59 @@
+{% extends 'food/base.html' %}
+<!-- {% load cart_tag %}
+ -->{% load static %}
+{% load mathfilters %}
+
+  {% block content %}
+
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <div class="container">
+    <br>
+  <h1 class="tt">ODER LIST</h1>
+  <div class="right">
+    <a href="{% url 'add_product' %}"><button type="button" class="button1">Add Product</button></a>
+     <a href="{% url 'product_byuser' %}"><button type="button" class="button1">Product List</button></a>
+</div><br>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+<!--         <th>S.No</th>
+ -->        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <td>Category</td>
+        <th>Product ID</th>
+        <th>Add to Cart</th>
+        <th>Remove</th>   
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+<!--         <td>{{ forloop.counter }}</td>
+ -->    {% for w in wishs %}
+
+        <td><img height="150" width="150" src="/media/{{w.item.image}}"></td>
+        <td>{{w.item.name}}</td>
+        <td>{{w.item.price}}</td>
+        <td>{{w.item.category.title}}</td>
+        <td>{{w.item.pk}}</td>
+        <td><a href="{% url 'add_to_cart' w.pk %}"> Add to cart </a></td>
+        <td><a href="{% url 'remove_wish' w.pk %}"> Remove </a></td>
+      </tr>
+
+    {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
+     
+          

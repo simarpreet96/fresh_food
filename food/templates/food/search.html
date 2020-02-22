@@ -1,0 +1,44 @@
+{% extends 'food/base.html' %}
+
+{% block content %}
+<br>
+<div class="container">
+	<div>
+		{% if allpost|length < 1  %}
+		<p>your search <b>{{query}}</b> did not match any docoment </p>
+		suggesitions:
+		<ul>
+		<li>Try different keyword</li>
+		</ul>
+		{% endif %}
+	</div>
+
+<div class="row mb-4"> 
+{% for p in allpost %}
+
+  <div class="col-sm-3 ">
+  	<div class="card mr-4" style="float:left" >
+  <a class="thumbnail" href="{% url 'product_pg' p.pk %}" title="lorem ippsum dolor dummy">
+  <img class="card-img-top" height="250" width="250" src="/media/{{p.image}}" alt="Card image"></a>
+  <div class="card-body">
+    <h4 class="card-title">{{p.name}}</h4>
+    <p class="card-text">$ {{p.price}}</p>
+    <!-- <a href="{% url 'add_to_cart' p.pk %}" class="btn btn-primary btn-lg btn-block addtocart">Add to cart</a> -->
+  </div>
+              <div class="btn-group">
+                <button type="button" data-toggle="tooltip" class="btn btn-default wishlist" title="Add to Wish List" ><i class="fa fa-heart-o"></i></button>
+
+                <a href="{% url 'add_to_cart' p.pk %}">
+                <button type="button" id="button-cart" data-loading-text="Loading..." class="btn btn-primary btn-lg btn-block addtocart">Add to Cart</a></button>
+                <button type="button" data-toggle="tooltip" class="btn btn-default compare" title="Compare this Product" ><i class="fa fa-exchange"></i></button>
+
+              </div>
+</div>
+</div>
+{% endfor %}
+  
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'food/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Edit Details He</h2>
+    <form method="POST" class="post-form" action="" enctype="multipart/form-data">
+    	{% csrf_token %}
+    	{{ form.media }}
+        {{ form.as_p }}
+        <button type="submit"class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

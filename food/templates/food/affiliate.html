@@ -1,0 +1,77 @@
+{% extends 'food/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fresh Food</title>
+<div class="container">
+  <ul class="breadcrumb">
+    <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+  <div class="row">
+    <div id="column-left" class="col-sm-3 hidden-xs column-left">
+      <div class="column-block">
+        <div class="columnblock-title">Affiliate</div>
+        <div class="affiliate-block">
+          <div class="list-group"> <a href="login.html" class="list-group-item">Login</a> <a href="register.html" class="list-group-item">Register</a> <a href="forgetpassword.html" class="list-group-item">Forgotten Password</a> <a href="#" class="list-group-item">My Account</a> <a href="#" class="list-group-item">Payment Options</a> <a href="#" class="list-group-item">Affiliate Tracking</a> <a href="#" class="list-group-item last">Transactions</a> </div>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="col-sm-6">
+      <h1>Affiliate Program</h1>
+      <p>maxenlist affiliate program is free and enables members to earn revenue by placing a link or links on their web site which advertises maxenlist or specific products on it. Any sales made to customers who have clicked on those links will earn the affiliate commission. The standard commission rate is currently 5%.</p>
+      <p>For more information, visit our FAQ page or see our Affiliate terms &amp; conditions.</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="well">
+            <h2>New Affiliate</h2>
+            <p>
+            <p>I am not currently an affiliate.</p>
+            <p>Click Continue below to create a new affiliate account. Please note that this is not connected in any way to your customer account.</p>
+
+            <a class="btn btn-primary" href="register.html">Continue</a></div>
+        </div>
+        <div class="col-sm-6">
+          <div class="well">
+            <h2>Affiliate Login</h2>
+            <p><strong>I am a returning affiliate.</strong></p>
+            <form action="login.html" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label class="control-label" for="input-email">Affiliate E-Mail</label>
+                <input type="text" name="email" value="" placeholder="Affiliate E-Mail" id="input-email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="input-password">Password</label>
+                <input type="password" name="password" value="" placeholder="Password" id="input-password" class="form-control" />
+                <a href="forgetpassword.html">Forgotten Password</a> </div>
+              <input type="submit" value="Login" class="btn btn-primary" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="footer-bottom">
+  <div class="container">
+    <div class="copyright">Powered By<a class="yourstore" href="http://www.lionode.com/">lionode &copy; 2016 </a> </div>
+    <div class="footer-bottom-cms">
+      <div class="footer-payment">
+        <ul>
+          <li class="mastero"><a href="#"><img alt="" src="image/payment/mastero.jpg"></a></li>
+          <li class="visa"><a href="#"><img alt="" src="image/payment/visa.jpg"></a></li>
+          <li class="currus"><a href="#"><img alt="" src="image/payment/currus.jpg"></a></li>
+          <li class="discover"><a href="#"><img alt="" src="image/payment/discover.jpg"></a></li>
+          <li class="bank"><a href="#"><img alt="" src="image/payment/bank.jpg"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<!-- Mirrored from localhost/opc001/index.php?route=affiliate/login by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 30 Oct 2015 18:16:37 GMT -->
+</html>

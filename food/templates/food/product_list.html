@@ -1,0 +1,45 @@
+{% extends 'food/base.html' %}
+{% load static %}
+
+  {% block content %}
+      
+    {% for p in posts %}
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>price</th>
+        <th>category</th>
+        <th>image</th>
+        <th>description</th>
+        <th>published_date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.category }}</td>
+        <td><img height="70" width="70" src="/media/{{ p.image }}" ></td>
+        <td>{{ p.detail_text|safe }}</td>
+        <td>{{ p.published_date }}</td>
+        <td>
+            <button><a href="{% url 'product_edit' p.pk %}">Edit</a> </button>&nbsp 
+            <button><a href="{% url 'product_del' p.pk %}">Delete</a></button> &nbsp
+            {% if p.published == 1 %}
+            <button><a href="{% url 'product_publish' p.pk%}">published</a></button>
+            {% else  %}
+            <button><a href="{% url 'product_publish' p.pk%}">unpublished</a></button>
+            {% endif %}
+        </td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
+
+    {% endfor %} 
+
+  {% endblock %}

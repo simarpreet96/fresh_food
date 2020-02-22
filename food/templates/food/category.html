@@ -1,0 +1,47 @@
+{% extends 'food/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <html lang="en">
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+
+  <table style="width:100%; margin-left: 100px;">
+    <thead>
+      <tr>
+        <th>FRUIT</th>
+        <th>VEGITABLE</th>
+        <th>EXTRA</th>
+      </tr>
+    </thead>
+    <tbody>
+<!--       <div class="container"> 
+ -->      <tr>
+        <td>{% for f in food %}
+                            <span>{{ f.name }}</span><br>
+  {% endfor %}
+</td>
+
+        <td> {% for f in veg %}
+                            <span>{{ f.name }}</span><br>
+  {% endfor %}</td>
+
+        <td>{% for f in ext %}
+
+                            <span>{{ f.name }}</span><br>
+ 
+  {% endfor %}</td>
+      </tr>
+
+  </tbody>
+  </table>
+</body>
+</html>
+
+  {% endblock %}

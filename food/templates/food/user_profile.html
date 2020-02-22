@@ -1,0 +1,105 @@
+{% extends 'food/base.html' %}
+{% load static %}
+
+{% block content %}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="{% static 'css/stylesheet2.css' %}" rel="stylesheet">
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+{% for post in posts2 %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 user-details">
+            <div class="user-image">
+                <img src="/media/{{ post.image }}" alt="Karan Singh Sisodia" title="Karan Singh Sisodia" class="img-circle">
+            </div>
+            <div class="user-info-block" style="margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  "
+ >
+                <div class="user-heading">
+                    <h3>{{ post.first_name }} {{ post.last_name }} </h3>
+                    <span class="help-block">{{ post.city }} {{ post.country }}</span>
+                </div>
+                <ul class="navigation">
+                     <li>
+                        <a data-toggle="tab" href="#email">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a data-toggle="tab" href="#information">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#settings">
+                            <span class="glyphicon glyphicon-print"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#events">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="user-body">
+                    <div class="tab-content">
+                        <div id="email" class="tab-pane active">
+                            <h4>{{ post.email}}</h4>
+                        </div>
+                        <div id="information" class="tab-pane">
+                            <h4> Address1-{{ post.address1 }} <br>
+                                 Address2-{{ post.address2 }}</h4>
+                        </div>
+                        <div id="settings" class="tab-pane">
+                            <h4>Fax- {{ post.fax }}  <br>
+                                Postal Code-{{ post.postal_code }}
+                            </h4>
+                        </div>
+                        
+                        <div id="events" class="tab-pane">
+                            <h4> Subscribe-{{ post.subscribe }}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+               <br>
+            <a href="{% url 'user_edit' post.pk %}">Edit</a> &nbsp 
+            <a href="{% url 'user_del' post.pk %}">Delete</a> &nbsp
+            <a href="{% url 'password_reset' %}">Forget Password</a> &nbsp 
+    <br>
+
+        </div>
+    </div>
+</div>
+        {% endfor %}  
+
+
+{% endblock %}
