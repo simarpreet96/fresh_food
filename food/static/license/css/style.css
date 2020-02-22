@@ -1,0 +1,323 @@
+/*-----------------------------------------------------------------------------------
+
+  Template Name: Forge Ecommerce Responsive Bootstrap Template
+  Template URI: http://bootexperts.com
+  Description: This is html5 template
+  Author: BootExperts
+  Author URI: http://bootexperts.com
+  Version: 1.0
+
+-----------------------------------------------------------------------------------
+    
+CSS INDEX
+===================
+  1. Theme Default CSS (css/shortcode/default.css)
+  2. Header CSS (css/shortcode/header.css)
+  3. Slider CSS (css/shortcode/slider.css)
+  4. Footer CSS (css/shortcode/footer.css)
+  5. @font-face
+  6. Banner CSS
+  7. Featured Product css
+  8. Offer css
+  9. Up Comming Product css
+  10. Offer Banner Area CSS
+  11. Best Saller css
+  12. Subscribe Area CSS
+  13. Blog & Testimonial CSS
+  14. Banner Two CSS
+  15. Offer Banner two CSS
+  16. Testimonial Two css
+  17. Breadcrumbs Area CSS
+  18. About Page css
+  19. Shop page css
+  20. Shop leftside Bar css
+  21. Shop list css
+  22. 404 Page css
+  23. Cart css
+  24. Checkout css
+  25. Product Details CSS
+  26. Order Complate Page CSS
+  27. Login Resgisterr css
+  28. My Account CSS
+  29. Blog Page css
+  30. Blog Details Page css
+
+-----------------------------------------------------------------------------------*/
+/* @font-face start */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*----------------------------------------*/
+/*  5. @font-face
+/*----------------------------------------*/
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url("fonts/Montserrat-Regular.otf") format("opentype"),
+    url("fonts/Montserrat-Light.otf") format("opentype"),
+    url("fonts/Montserrat-UltraLight.otf") format("opentype"),
+    url("fonts/Montserrat-SemiBold.otf") format("opentype"),
+    url("fonts/Montserrat-Bold.otf") format("opentype"),
+    url("fonts/Montserrat-ExtraBold.otf") format("opentype"),
+}
+@font-face {
+    font-family: 'Xpressive';
+    src: url("fonts/Xpressive.ttf") format("opentype"),
+    url("fonts/Xpressive-Bold.ttf") format("opentype")
+}
+@font-face {
+  font-family: 'Oswald-Heavy';
+  src: url('fonts/Oswald-Heavy.eot');
+  src: url('fonts/Oswald-Heavy.woff2') format('woff2'),
+       url('fonts/Oswald-Heavy.woff') format('woff'),
+       url('fonts/Oswald-Heavy.ttf') format('truetype'),
+       url('fonts/Oswald-Heavy.svg#Oswald-Heavy') format('svg'),
+       url('fonts/Oswald-Heavy.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-ExtraLight';
+  src: url('fonts/Oswald-ExtraLight.eot');
+  src: url('fonts/Oswald-ExtraLight.woff2') format('woff2'),
+       url('fonts/Oswald-ExtraLight.woff') format('woff'),
+       url('fonts/Oswald-ExtraLight.ttf') format('truetype'),
+       url('fonts/Oswald-ExtraLight.svg#Oswald-ExtraLight') format('svg'),
+       url('fonts/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald-Medium';
+  src: url('fonts/Oswald-Medium.eot');
+  src: url('fonts/Oswald-Medium.woff2') format('woff2'),
+       url('fonts/Oswald-Medium.woff') format('woff'),
+       url('fonts/Oswald-Medium.ttf') format('truetype'),
+       url('fonts/Oswald-Medium.svg#Oswald-Medium') format('svg'),
+       url('fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*----------------------------------------*/
+/*  6. Banner CSS
+/*----------------------------------------*/
+
+/*----------------------------------------*/
+/*  23. Cart css
+/*----------------------------------------*/
+
+img {
+  display: inline-block;
+  width: 90;
+  height: 90;
+}
+
+.cart-tab-pill ul li {
+  display: inline-block;
+  padding-right: 90px;
+}
+.cart-tab-pill ul li:last-child {
+  padding: 0;
+}
+.cart-tab-pill ul li a {
+  font-size: 16px;
+  font-weight: 600;
+}
+.cart-tab-pill ul li.active a {
+  color: #cd6289;
+}
+.cart-tab-pill ul li a span {
+  background: #a6a6a6 none repeat scroll 0 0;
+  color: #ffffff;
+  display: block;
+  float: left;
+  height: 23px;
+  line-height: 23px;
+  margin-right: 10px;
+  transition: all 0.3s ease 0s;
+  width: 23px;
+}
+.cart-tab-pill ul li.active a span {
+  background: #cd6289 none repeat scroll 0 0;
+}
+.cart-tab-pill ul li:hover a span {
+  background: #cd6289 none repeat scroll 0 0;
+}
+.table-content table {
+  background: #ffffff none repeat scroll 0 0;
+  border: medium none;
+  width: 100%;
+}
+.table-content tbody {
+  border-color: #ebebeb;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.table-content table th {
+  border-top: medium none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px 10px;
+  text-transform: capitalize;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.table-content table td {
+  border-top: medium none;
+  padding: 20px 0
+  vertical-align: middle;
+}
+.table-content table td.product-thumbnail {
+  width: 150px;
+  padding: 20px 25px 20px 0;
+}
+.cart-product-name > a:hover {
+  color: #cd6289;
+}
+.cart-product-name > a {
+  color: #282828;
+}
+.cart-product-name {
+  width: 400px;
+}
+.cart-product-name > p {
+  color: #a6a6a6;
+}
+.cart-product-name > label {
+  color: #a6a6a6;
+}
+.cart-product-name label span {
+  color: #333333;
+}
+.quantity-wanted-p {
+  border: 1px solid #A6A6A6;
+  display: inline-block;
+}
+.quantity-wanted-p .qtybutton {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-align: right;
+  width: 20px;
+}
+.quantity-wanted-p input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none !important;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+}
+.cart-product-price {
+  width: 100px;
+}
+.quantity-wanted-p .inc.qtybutton {
+  text-align: left;
+}
+.cart-calculate select {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ebebeb;
+  color: #a6a6a6;
+    font-weight: 300;
+  height: 26px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  width: 45%;
+}
+.cart-button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ebebeb;
+  color: #282828;
+  font-weight: 600;
+  padding: 6px 15px;
+  transition: all 0.3s ease 0s;
+}
+.cart-button:hover {
+  background: #cd6289 none repeat scroll 0 0;
+  border-color: #cd6289;
+  color: #fdfdfd;
+}
+.cart-discount > input {
+  height: 26px;
+  margin-right: 25px;
+  width: 46%;
+}
+.cart-total table th {
+  border: medium none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.cart-total table td {
+  border: medium none;
+  float: right;
+}
+.cart_totals table td .amount {
+  color: #c38749;
+  float: right;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 5px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.cart-total .amount {
+  line-height: 38px;
+  margin: 0;
+}
+.cart-subtotal {
+  border-bottom: 1px solid #ebebeb;
+}
+.table-content-total table {
+  width: 100%;
+}
+.table-content-total {
+  border: 1px solid #ededed;
+  padding: 10px 40px;
+}
+.update-checkout a {
+  border: 1px solid #d7d7d7;
+  color: #252525;
+  display: block;
+  float: left;
+  font-weight: 600;
+  height: 26px;
+  line-height: 24px;
+  margin-right: 30px;
+  padding: 0 20px;
+}
+.update-checkout a:last-child {
+  margin: 0;
+}
+.update-checkout a:hover {
+  background: #cd6289 none repeat scroll 0 0;
+  border-color: #cd6289;
+  color: #ffffff;
+}
+/*----------------------------------------*/
+/*  24. Checkout css
+/*----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
