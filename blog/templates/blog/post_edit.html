@@ -1,0 +1,12 @@
+{% extends 'food/base.html' %}
+
+{% block content %}
+    <h2>New post</h2>
+    <form method="POST" class="post-form"  enctype="multipart/form-data">
+    	{% csrf_token %}
+    	{{ form.media }}
+        {{ form.as_p }}
+        {{ django.db.models.signals.post_save}}
+        <button type="submit"class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'food/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fresh Food</title>
+<div class="container">
+  <ul class="breadcrumb">
+      <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  <div class="row">
+
+    <div id="content" class="col-sm-9">
+    {% for post in posts %}
+      <div class="blog1 blog">
+        <div class="blog_img"><img src="/media/{{ post.image }}" alt="{{ post.title }}" /></div>
+        <h4 class="p-name"><a href="singale-blog.html">{{ post.title }}</a></h4>
+        <ul class="blog-meta">
+          <li><i class="fa fa-clock-o"></i><span class="dt-published">{{ post.published_date }}</span></li>
+          <li><i class="fa fa-comment-o"></i><span>2</span>  <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a></li>
+          <li><i class="fa fa-user"></i><span><a rel="author" title="Posts by Admin" href="#">{{ post.author }}</a></span></li>
+        </ul>
+        <p class="p-summary"></p>
+        <p>{{ post.text|safe }}</p>
+        <a class="u-url" href="{% url 'post_detail' post.pk %}">read more</a> </div>
+
+        {% endfor %}
+    </div>
+    <!-- end blog-home -->
+
+    <div id="column-right" class="col-sm-3 hidden-xs column-left">
+     
+      <!-- end blog-sidebar -->
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}
