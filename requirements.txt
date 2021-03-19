@@ -44,7 +44,7 @@ django-social-widgets==0.4.0
 django-tastypie==0.14.3
 django-templated-mail==1.1.1
 django-utils==0.0.2
-djangorestframework==3.9.2
+djangorestframework==3.11.2
 djoser==2.0.3
 elasticsearch==5.0.1
 et-xmlfile==1.0.1
