@@ -6,7 +6,7 @@ Babel==2.7.0
 backports.csv==1.0.7
 billiard==3.6.1.0
 camelcase==0.2
-celery==4.3.0
+celery==5.2.2
 certifi==2018.1.18
 cffi==1.13.2
 chardet==3.0.4
